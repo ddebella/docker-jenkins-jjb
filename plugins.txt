@@ -1,4 +1,3 @@
-cloudbees-foldertrilead-api
 jackson2-api
 branch-api
 jdk-tool
@@ -151,4 +150,3 @@ envinject
 build-monitor-plugin
 statusmonitor
 conditional-buildstep
-parameterized-triggers
