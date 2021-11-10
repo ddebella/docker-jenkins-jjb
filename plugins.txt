@@ -32,7 +32,6 @@ docker-java-api
 azure-app-service
 pipeline-stage-step
 azure-function
-azure-iot-edge
 display-url-api
 ansicolor
 ansible
