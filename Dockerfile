@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.235.1-lts-centos7
+FROM jenkins/jenkins:2.289.3-lts-centos7
 LABEL maintainer="KAINOS"
 
 # Install system packages (ansible and JJB)
