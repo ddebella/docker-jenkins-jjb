@@ -1,6 +1,6 @@
 ## DOCKER IMAGE THAT CONTAINS JENKINS JOB BUILDER (JJB)
 
-- This creates a docker image from specific jenkins version (2.235.1 - LTS)
+- This creates a docker image from specific jenkins version (2.289.3-centos7 - LTS)
 - This will install ansible to do a precheck on yml files base on JJB
 - This will install jenkins job builder to generate the appropiate jobs
 - This will install Maven version 3.6.3
