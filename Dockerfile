@@ -12,15 +12,15 @@ RUN yum -y install build-essential \
             python-setuptools \
             openssl \
             python3-pip \
-            wget
+            wget \
+            ansible
 
-RUN pip-3 install ansible \
-            jenkins-job-builder
+RUN pip-3 install jenkins-job-builder
 
 ENV PATH ~/.local/bin/:$PATH
 
 # Install Maven
-RUN wget https://www-us.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz -P /tmp/
+RUN wget https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz -P /tmp/
 RUN tar xf /tmp/apache-maven-3.6.3-bin.tar.gz -C /opt/
 RUN ln -s /opt/apache-maven-3.6.3 /opt/maven
 
