@@ -5,6 +5,9 @@ LABEL maintainer="KAINOS"
 USER root
 RUN yum clean all
 
+# Disable SSL verification
+RUN echo "sslverify=false" >> /etc/yum.conf
+
 RUN yum -y install build-essential \
             python-pyrex \
             idle-python2.7 \
@@ -13,9 +16,14 @@ RUN yum -y install build-essential \
             openssl \
             python3-pip \
             wget \
-            ansible
+            centos-release-ansible-28
 
-RUN pip-3 install jenkins-job-builder
+RUN yum -y install ansible
+
+RUN pip-3 install --trusted-host pypi.org \
+    --trusted-host pypi.python.org \
+    --trusted-host files.pythonhosted.org \
+    jenkins-job-builder
 
 ENV PATH ~/.local/bin/:$PATH
 
